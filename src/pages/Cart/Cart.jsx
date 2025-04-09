@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useState, useEffect } from "react";
 import useCart from "../../hooks/useCart";
 import { FaTrash } from "react-icons/fa";
 import Swal from "sweetalert2";
@@ -9,6 +9,13 @@ const Cart = () => {
   const [cart, refetch] = useCart();
   const { user } = useContext(AuthContext);
   const [cartItems, setCartItems] = useState([]);
+
+  // Sync cart with cartItems
+  useEffect(() => {
+    if (Array.isArray(cart)) {
+      setCartItems(cart);
+    }
+  }, [cart]);
 
   //calculatedPrice
   const calculatePrice = (item) => {
@@ -127,10 +134,12 @@ const Cart = () => {
     });
   };
 
-  //CalculateSubTotal
-  const cartSubTotal = cart.reduce((total, item) => {
-    return total + calculatePrice(item);
-  }, 0);
+  //CalculateSubTotal - Fixed to handle non-array cart
+  const cartSubTotal = Array.isArray(cart)
+    ? cart.reduce((total, item) => {
+        return total + calculatePrice(item);
+      }, 0)
+    : 0;
 
   const orderTotal = cartSubTotal;
 
@@ -142,7 +151,7 @@ const Cart = () => {
       </div>
 
       {/* table cart */}
-      {cart.length > 0 ? (
+      {Array.isArray(cart) && cart.length > 0 ? (
         <div>
           <div className="mx-32">
             <div className="overflow-x-auto">
@@ -190,6 +199,7 @@ const Cart = () => {
                           type="number"
                           value={item.quantity}
                           className="w-10 mx-2 text-center overflow-hidden appearance-none"
+                          readOnly
                         ></input>
                         <button
                           className="font-semibold btn btn-ghost btn-sm"
@@ -236,7 +246,9 @@ const Cart = () => {
             </div>
             <div className="flex mb-10 mr-52 items-center space-x-4">
               <h3 className="font-semibold">Shopping Details</h3>
-              <p className="font-medium btn">Total Item : {cart.length}</p>
+              <p className="font-medium btn">
+                Total Item : {Array.isArray(cart) ? cart.length : 0}
+              </p>
               <p className="font-medium btn">Total Price : ₹ {orderTotal}</p>
               <Link to="/process-checkout">
                 <button className="btn bg-red-500 text-white font-normal">
