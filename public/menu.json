@@ -1,0 +1,99 @@
+[
+    {
+        "title": "Interior Painting",
+        "des": "Starting from ₹10 per square foot",
+        "image": "/images/Painting/interior1.jpg",
+        "category": "Painting",
+        "rating": "4.1",
+        "price": 149
+    },
+    {
+        "title": "Exterior Painting",
+        "des": "Starting from ₹15 per square foot",
+        "image": "/images/Painting/exterior.jpg",
+        "category": "Painting",
+        "rating": "4.3",
+        "price": 299
+    },
+    {
+        "title": "wallpapering",
+        "des": "Starting from ₹12 per square foot",
+        "image": "/images/Painting/wallpaper.jpg",
+        "category": "Painting",
+        "rating": "4.7",
+        "price": 199
+    },
+    {
+        "title": "Putty",
+        "des": "Starting from ₹12 per square foot",
+        "image": "/images/Painting/putty.png",
+        "category": "Painting",
+        "rating": "4.7",
+        "price": 199
+    },
+    {
+        "title": "Polishing",
+        "des": "Starting from ₹12 per square foot",
+        "image": "/images/Painting/polish.png",
+        "category": "Painting",
+        "rating": "4.7",
+        "price": 199
+    },
+    {
+        "title": "Stainer",
+        "des": "Starting from ₹12 per square foot",
+        "image": "/images/Painting/stainer.png",
+        "category": "Painting",
+        "rating": "4.7",
+        "price": 199
+    },
+    {
+        "title": "Switch & Socket",
+        "des": "Starting from ₹49 (15+ amp)",
+        "image": "/images/Electrician/socket.jpg",
+        "category": "Electrician",
+        "rating": "4.2",
+        "price": 239
+    },
+     {
+        "title": "Fan",
+        "des": "Starting from ₹89",
+        "image": "/images/Electrician/fan.jpg",
+        "category": "Electrician",
+        "rating": "3.8",
+        "price": 89
+    },
+     {
+        "title": "Light",
+        "des": "Starting from ₹129",
+        "image": "/images/Electrician/light.jpg",
+        "category": "Electrician",
+        "rating": "3.8",
+        "price": 129
+    },
+    {
+        "title": "Wiring",
+        "des": "Starting from ₹89(per 5m)",
+        "image": "/images/Electrician/wiring.jpg",
+        "category": "Electrician",
+        "rating": "3.8",
+        "price": 129
+    },
+    {
+        "title": "MCB and Fuse",
+        "des": "Starting from ₹80",
+        "image": "/images/Electrician/mcb.jpg",
+        "category": "Electrician",
+        "rating": "3.8",
+        "price":129
+    },
+     {
+        "title": "Battery and Inverter",
+        "des": "Starting from ₹199",
+        "image": "/images/Electrician/battery.jpg",
+        "category": "Electrician",
+        "rating": "3.8",
+        "price":129
+    }
+
+]

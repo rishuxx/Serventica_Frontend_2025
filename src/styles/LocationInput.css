@@ -1,0 +1,18 @@
+.suggestion-list::-webkit-scrollbar {
+    width: 8px;
+    border-radius: 6px;
+    /* Increase the width of the scroll bar */
+}
+
+.suggestion-list::-webkit-scrollbar-thumb {
+    background-color: #545352;
+    /* Set the color of the scroll thumb */
+    border-radius: 6px;
+    /* Round the corners of the scroll thumb */
+}
+
+.suggestion-list::-webkit-scrollbar-track {
+    background-color: #ffffff;
+     border-radius: 6px;
+    /* Set the color of the scroll track */
+}
