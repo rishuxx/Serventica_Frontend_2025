@@ -6,7 +6,7 @@ const Painting = () => {
   const [Painting, setPainting] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:6001/menu")
+    fetch("https://serventica-backend-2025.onrender.com/menu")
       .then((res) => res.json())
       .then((data) => {
         const specials = data.filter((item) => item.category === "Painting");

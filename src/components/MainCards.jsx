@@ -22,7 +22,7 @@ const MainCards = ({ item }) => {
         email: user.email,
       };
       // console.log(cartItem);
-      fetch("http://localhost:6001/carts", {
+      fetch("https://serventica-backend-2025.onrender.com/carts", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

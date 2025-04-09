@@ -17,7 +17,7 @@ const Cart = () => {
 
   //handleIncrease
   const handleIncrease = (item) => {
-    fetch(`http://localhost:6001/carts/${item._id}`, {
+    fetch(`https://serventica-backend-2025.onrender.com/carts/${item._id}`, {
       method: "PUT",
       headers: {
         "Content-type": "application/json; charset=UTF-8",
@@ -47,7 +47,7 @@ const Cart = () => {
     const quantity = item.quantity || item.menuItem.quantity || 0;
 
     if (quantity > 1) {
-      fetch(`http://localhost:6001/carts/${item._id}`, {
+      fetch(`https://serventica-backend-2025.onrender.com/carts/${item._id}`, {
         method: "PUT",
         headers: {
           "Content-type": "application/json; charset=UTF-8",
@@ -106,9 +106,12 @@ const Cart = () => {
       confirmButtonText: "Yes, delete it!",
     }).then((result) => {
       if (result.isConfirmed) {
-        fetch(`http://localhost:6001/carts/${item._id}`, {
-          method: "DELETE",
-        })
+        fetch(
+          `https://serventica-backend-2025.onrender.com/carts/${item._id}`,
+          {
+            method: "DELETE",
+          }
+        )
           .then((res) => res.json())
           .then((data) => {
             if (data.deletedCount > 0) {

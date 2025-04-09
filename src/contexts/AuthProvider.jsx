@@ -62,13 +62,15 @@ const AuthProvider = ({ children }) => {
         if (currentUser) {
           const userInfo = { email: currentUser.email };
 
-          axios.post("http://localhost:6001/jwt", userInfo).then((response) => {
-            //console.log(response.data.token);
+          axios
+            .post("https://serventica-backend-2025.onrender.com/jwt", userInfo)
+            .then((response) => {
+              //console.log(response.data.token);
 
-            if (response.data.token) {
-              localStorage.setItem("acessToken", response.data.token);
-            }
-          });
+              if (response.data.token) {
+                localStorage.setItem("acessToken", response.data.token);
+              }
+            });
         } else {
           localStorage.removeItem("acessToken");
         }
